@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  background-image: url(galaxy.jpg);
+  overflow: hidden;
+  width: 1436px;
+  height: 791px;
+}
+ 
+#FromEarth {
+  display: none;
+  position: absolute;
+  left: 693px;
+  bottom: 128px;
+  }
+#FromEarth img{
+
+    position: relative;
+    height: 70px;
+  }
+#FromMoon{
+  position: absolute;
+  left: 695px;
+  bottom: 1138px;
+  }
+#FromMoon img{
+  position: relative;
+  height: 70px;
+  transform: rotate(180deg);
+}
+
+  .moonAndEarth{
+    text-align: center;
+  }
+  #moon img{
+    position: relative;
+    height: 64px;
+  }
+  #earth img{
+    position: relative;
+    height: 215px;
+    margin-top: 450px;
+  }
+button{
+    position: relative;
+    height: 52px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    bottom: 90px;
+    left: 380px;
+    width: 117px
+}
+button.back{
+  position: relative;
+  top: -684px;
+  left: 825px;
+}
+button.reset{
+  position: relative;
+  left: 825px;
+}
+.rotateRocket{
+  transform: rotate(180deg);
+}

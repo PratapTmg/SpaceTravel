@@ -1,0 +1,50 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-image: url(galaxy.jpg);
+  /* overflow: hidden; */
+}
+.container{
+  text-align: center;
+}
+.blank img{
+  width: 200px;
+  height: 117px;
+}
+.blank2 img{
+  width: 233px;
+  height: 196px;
+  margin-top: 58vh;
+}
+
+#rocket img{
+  position: relative;
+  width: 84px;
+  height: 84px;
+  bottom: 23vh;
+  animation: movingRocket 5s 1;
+}
+@keyframes movingRocket {
+  from {bottom: 23vh;}
+  to {bottom: 97vh;}
+}
+
+button {
+  position: fixed;
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  cursor: pointer;
+  border: 2px dotted red;
+  margin: 0.1em;
+  border-radius: 50px;
+  height: 105px;
+  background: red;
+  bottom: 16vh;
+}
+button.close{
+  margin-left: 78vw;
+  
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="space.css" />
+  </head>
+  <body>
+    <div id="Container">
+      <div class="moonAndEarth">
+        <div id="moon"><img src="moon.png" alt="" /></div>
+        <div id="earth"><img src="earth.png" alt="" /></div>
+      </div>
+      <div id="FromEarth"><img src="rocket.png" alt="" /></div>
+      <div id="FromMoon"><img src="rocket.png" alt="" /></div>
+      <button class="go" onclick="Boom(),comes()">LAUNCH!</button>
+      <button class="back" onclick="comeBack()">LAUNCH BACK!</button>
+      <button class="reset" onclick="location.reload()">RESET!</button>
+    </div>
+    <script>
+      var id = null;
+      function Boom() {
+        let elem = document.getElementById("FromEarth");
+        let pos = 128;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 630) {
+            clearInterval(id);
+            document.getElementById("FromEarth").style.display = "none";
+          } else {
+            pos++;
+            elem.style.bottom = pos + "px";
+          }
+        }
+      }
+    </script>
+    <script>
+      function comeBack() {
+        let elem = document.getElementById("FromMoon");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 550) {
+            clearInterval(id);
+            document.getElementById("FromMoon").classList.add('rotateRocket');
+            document.getElementById("FromMoon").style.bottom=pos+"px";
+          } else {
+            pos++;
+            elem.style.top = pos + "px";
+          }
+        }
+      }
+    </script>
+
+    <script>
+      function comes() {
+        document.getElementById("FromEarth").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
